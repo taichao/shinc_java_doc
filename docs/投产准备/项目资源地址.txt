@@ -1,0 +1,25 @@
+1、马克飞象地址
+http://www.maxiang.info
+
+2、云服务器地址
+http://cloud.shinc.net/public.php?service=files&t=ec7ad6416a1f5ce89a52613dceff2519&path=%2F
+在命令终端输入: sudo vi /etc/hosts   然后回车
+hosts中配置：192.168.1.224   cloud.shinc.net 
+hosts中配置：192.168.1.222   code.shinc.net 
+
+3、MyBatis3文档地址
+http://mybatis.github.io/mybatis-3/
+
+4、SVN地址
+svn://code.shinc.net /repo_christmas
+
+5、龙冶生产地址
+http://182.92.189.177:3000/login
+用户名：admin  密码：admin
+
+6、龙冶测试地址
+http://192.168.1.224:3000/login
+用户名：admin  密码：admin
+
+7、maven 官方包 http://search.maven.org
+
