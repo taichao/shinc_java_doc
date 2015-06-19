@@ -1,0 +1,25 @@
+第一步：
+修改deploy.sh脚本  将源地址改为自己本地需要发包的地址(注意密码：password)
+
+第二步：
+执行发布脚本，源文件会被拷贝到docker服务的/deploy 目录下
+
+第三步
+通过ssh登陆docker服务器  ssh -p 10422 root@182.92.189.177  密码:mypwd
+
+第四步(Docker服务器tomcat安装目录/root/root/apache-tomcat-8.0.22)
+1、停止tomcat服务执行（/root/apache-tomcat-8.0.22/bin/shutdown.sh）脚本
+2、删除/root/apache-tomcat-8.0.22/webapps目录下部署包文件
+3、删除/root/apache-tomcat-8.0.22/work/Catalina/localhost目录下缓存文件
+
+第五步
+拷贝部署文件到tomcat部署目录
+cp /deploy/部署文件  /root/apache-tomcat-8.0.22/webapps/
+
+第六步
+启动tomcat
+cd 到/root/apache-tomcat-8.0.22/bin/目录
+执行 nohup ./startup.sh &
+
+第七步
+鼠标关闭当前终端，不能exit
