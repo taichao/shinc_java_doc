@@ -1,1 +1,0 @@
-insert into cupid.ch_manage_user(username,password,type) values ('admin','$2a$04$miYtXC9SCrDevLTsmpjxguEELuui/RJOIg8yptXG1WfvpGw8zawnO',0);
