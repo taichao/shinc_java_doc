@@ -20,3 +20,6 @@ insert into cupid.ch_manage_user_authorities(username,authority) values ('admin'
 insert into cupid.ch_manage_user_authorities(username,authority) values ('admin','ROLE_MANAGEUSERMANAGE');
 insert into cupid.ch_manage_user_authorities(username,authority) values ('admin','ROLE_ORDERMANAGE');
 insert into cupid.ch_manage_user_authorities(username,authority) values ('admin','ROLE_STATISTICS');
+
+#新增供应商商信息表 2015-06－15 fzr
+insert into cupid.ch_manage_user_authorities(username,authority) values ('admin','ROLE_SUPPLIER');
