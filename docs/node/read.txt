@@ -1,3 +1,5 @@
-http://my.oschina.net/tpythoner/blog/425573
+安装:http://my.oschina.net/tpythoner/blog/425573
+学习:http://www.open-open.com/lib/view/1392611872538
 
 git@123.56.157.137:LyWebNode.git
+
