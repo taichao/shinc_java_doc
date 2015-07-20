@@ -1,4 +1,5 @@
 
+===========node============
 测试环境重启：
 ssh root@192.168.1.224 -p 10022
 /home/LyWebNode
@@ -16,3 +17,19 @@ http://182.92.189.177:3000/login
 6、龙冶测试地址
 http://192.168.1.224:3000/login
 用户名：admin  密码：admin
+
+=========java===============
+ssh javateam@192.168.1.222
+密码:javateam
+
+发布脚本:
+~/shell/deployLongye.sh
+
+tomcat:
+~/tomcat8/apache-tomcat-8.0.22
+
+longye_project:
+~/shinc_git/shinc_longye/longye
+
+日志:
+~/longyelog/
