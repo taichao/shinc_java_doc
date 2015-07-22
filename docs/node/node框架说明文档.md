@@ -9,18 +9,24 @@ sh service.sh [start|restart|stop|restartS|restartJ|min|normal|clear|mincss]
 - jserver 静态资源服务目录
 1. jserver.js 为实际启动入口
 2. config/service.json 静态资源服务配置信息
-			`{
+			
+
+```
+{
 			"max_time": 3000,
 			"root": "/Users/taichao/Code/berners/web",
 			"onPort": 3001,
 			"jspath": "script-min/"
-		}`
-		>root:根据个人情况配置
-		>onPort:启动端口
+}
+```
+>root:根据个人情况配置
+>onPort:启动端口
 
 - server 动态接口服务目录
 server/config/site.json
-`{
+
+```
+{
 	"SVERSION": 109.0305,
 	"JCSTATIC_BASE": "",
 	"CSS_JS_BASE_URL": "http://localhost:3001",
@@ -37,13 +43,19 @@ server/config/site.json
 	"meta_description": "",
 	"national_day_active": true,
 	"is_offline": true
-}`
+}
+```
+
 >CSS_JS_BASE_URL:根据实际情况配置
 
-	virtual_host.json
-	`{
-	  "localhost" : "news.com"
-	}`
+virtual_host.json
+
+```
+{
+  "localhost" : "news.com"
+}
+```
+
 - web 静态资源存放目录
 
 # 开发流程说明
