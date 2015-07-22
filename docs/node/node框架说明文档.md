@@ -51,9 +51,8 @@ server/config/site.json
 virtual_host.json
 
 ```
-{
-  "localhost" : "news.com"
-}
+
+
 ```
 
 - web 静态资源存放目录
@@ -70,15 +69,20 @@ virtual_host.json
   "localhost" : "news.com"
 }`
 >得到访问为news.com.计算的到实际访问域controller/news.com
+
 ### 2. 定位模块
 >取pathname=/user/list/param=1
 >模块文件名/方法名/[参数] 
 >模块：user
 >方法：list
 >参数：param=1
+
 ### 3. 找到实际controller方法
 >controller/news.com/user.js的list方法
->`'list' : function(params){
+>
+
+```
+'list' : function(params){
 		console.log('params' + params);
 		// console.log('reqdata=' + JSON.parse(this.__reqdata));
 		for(var i in this.__reqdata) {
@@ -103,21 +107,30 @@ virtual_host.json
 				mSelf.render('user/list.html' , data);
 			}
 		});
-	}`
-	params:param=1
-	this.__reqdata:包含post和get的所有参数
-	this.req.__get:get方法参数
-	this.req.__post：post请求参数
+	}
+```
+>params:param=1
+>this.__reqdata:包含post和get的所有参数
+>this.req.__get:get方法参数
+>this.req.__post：post请求参数
 	
 ### 4. 向java端发接口
 >- 构造请求参数
-		`var php = {
-			'getAdminUser':'/infomgmt/adminUser/getAdminUserById'}`
+		
+
+```
+var php = {
+			'getAdminUser':'/infomgmt/adminUser/getAdminUserById'
+		}
+```
 		
 >- 构造请求api
 >`this.bridgeMuch(php);`
 >发送请求并接收响应处理
->`this.listenOver(function(data){
+>
+
+```
+this.listenOver(function(data){
 			console.log(data)
 			if(!data.getAdminUser) {
 			} else {
@@ -125,9 +138,13 @@ virtual_host.json
 				data.menu = helper.getMenuList();
 				mSelf.render('user/list.html' , data);
 			}
-		});`
-		data的结果为：
-		`{ SVERSION: 109.031,
+		});
+```
+data的结果为：
+
+
+```
+{ SVERSION: 109.031,
   JCSTATIC_BASE: '',
   CSS_JS_BASE_URL: 'http://localhost:3001',
   SERVER_BASE: '/',
@@ -173,6 +190,10 @@ virtual_host.json
          HTTP Method = POST
          Request URI = /infomgmt/adminUser/getAdminUserById
           Parameters = {id=[78]}`
-          注意Parameters属性
+```
+  >注意Parameters属性
 ####响应页面
+
+```
 <script src="<%= this.CSS_JS_BASE_URL %>/flatlib/js/jquery-1.8.3.min.js"></script>
+```
