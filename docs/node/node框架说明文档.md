@@ -51,8 +51,9 @@ server/config/site.json
 virtual_host.json
 
 ```
-
-
+{
+"localhost" : "news.com"
+}
 ```
 
 - web 静态资源存放目录
@@ -73,14 +74,12 @@ virtual_host.json
 ### 2. 定位模块
 >取pathname=/user/list/param=1
 >模块文件名/方法名/[参数] 
->模块：user
->方法：list
->参数：param=1
+>- 模块：user
+>- 方法：list
+>- 参数：param=1
 
 ### 3. 找到实际controller方法
 >controller/news.com/user.js的list方法
->
-
 ```
 'list' : function(params){
 		console.log('params' + params);
